@@ -1,0 +1,30 @@
+{
+  "name": "local-code-bridge",
+  "version": "0.1.0",
+  "description": "Secure local-code MCP bridge: Streamable HTTP + OAuth 2.1 DCR/PKCE + passphrase. No LLM API.",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node --env-file-if-exists=.env dist/index.js",
+    "dev": "tsc --watch --preserveWatchOutput",
+    "test": "node --test dist/test/*.test.js",
+    "smoke": "node scripts/run-all.mjs",
+    "bridge:start": "powershell -ExecutionPolicy Bypass -File .\\start.ps1",
+    "bridge:stop": "powershell -ExecutionPolicy Bypass -File .\\stop.ps1",
+    "inspector": "npx @modelcontextprotocol/inspector@latest"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "express": "5.3.0",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/express": "5.0.5",
+    "@types/node": "22.10.0",
+    "typescript": "5.6.3"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}

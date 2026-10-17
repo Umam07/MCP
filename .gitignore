@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.bridge/
+.bridge-backup/
+bin/
+.env
+*.log
+sandbox-repo/.bridge/
+sandbox-repo/.bridge-backup/
